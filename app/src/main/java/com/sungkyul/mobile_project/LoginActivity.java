@@ -101,7 +101,6 @@ public class LoginActivity extends Activity {
                     editor.putString("비밀번호", id.getText().toString());
                     editor.commit();
 
-
                     //alert
                     alertDialog.setMessage("로그인 성공");
                     alertDialog.show();

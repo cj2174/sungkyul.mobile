@@ -40,9 +40,8 @@ public class PlanFragment extends Fragment {
 
     TimeProcesser TP = new TimeProcesser();
     FloatingActionButton btnAddplan;
-    Button btnCompletion;
     public PlanFragment() {
-        // Required empty public constructor
+
     }
 
 

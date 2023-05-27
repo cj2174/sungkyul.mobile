@@ -30,7 +30,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="활동 추가하기"
+                android:text="계획 추가하기"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
@@ -49,7 +49,7 @@
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:text="활동"
+                    android:text="계획"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_gravity="center_horizontal"
@@ -61,7 +61,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="활동명을 입력해 주세요."
+                    android:hint="계획명을 입력해 주세요."
                     android:drawableTint="@color/colorYellow"
                     android:id="@+id/edt_plan_add_name"
                     android:backgroundTint="@color/colorYellow"
@@ -88,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rdoActivity"
-                    android:text="활동 유형 선택"
+                    android:text="계획 유형 선택"
                     >
 
 
@@ -152,7 +152,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="활동 계획 추가"
+        android:text="추가하기"
         android:id="@+id/btnAddAddPlan"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"/>

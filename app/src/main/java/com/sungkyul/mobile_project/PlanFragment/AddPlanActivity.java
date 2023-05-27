@@ -81,7 +81,7 @@ public class AddPlanActivity extends Activity {
         while(cursor.moveToNext()){
             posterText[i] = cursor.getString(0);
             posterID[i] = cursor.getInt(1);
-            Log.i(this.getClass().getName(),"이게 제일 중요!! -> "+ posterID[i] + posterText[i] + "-->" + i);
+            Log.i(this.getClass().getName(),"활동 시작! -> "+ posterID[i] + posterText[i] + "-->" + i);
             i++;
             length = i;
         }
@@ -90,7 +90,7 @@ public class AddPlanActivity extends Activity {
         rdoActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "clicked activity button", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "활동 버튼 클릭", Toast.LENGTH_LONG).show();
                 timePicker.setVisibility(View.GONE);
                 plan_grid.setVisibility(View.VISIBLE);
             }
@@ -99,7 +99,7 @@ public class AddPlanActivity extends Activity {
         rdoTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "clicked time button", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "시간 버튼 클릭", Toast.LENGTH_LONG).show();
                 timePicker.setVisibility(View.VISIBLE);
                 plan_grid.setVisibility(View.GONE);
             }

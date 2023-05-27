@@ -157,7 +157,6 @@ public class ListViewAdapter extends BaseAdapter {
         listViewItemList.add(item);
     }
 
-
     class ViewHolder{
         ProgressBar progressBar;
     }

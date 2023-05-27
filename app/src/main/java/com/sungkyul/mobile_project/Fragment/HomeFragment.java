@@ -38,10 +38,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class HomeFragment extends Fragment {
 
 
@@ -101,7 +97,7 @@ public class HomeFragment extends Fragment {
         while(cursor.moveToNext()){
             posterText[i] = cursor.getString(0);
             posterID[i] = cursor.getInt(1);
-            Log.i(this.getClass().getName(),"이게 제일 중요!! -> "+ posterID[i] + posterText[i] + "-->" + i);
+            Log.i(this.getClass().getName(),"활동 시작! -> "+ posterID[i] + posterText[i] + "-->" + i);
             i++;
             length = i;
         }
@@ -128,7 +124,7 @@ public class HomeFragment extends Fragment {
                 long now = System.currentTimeMillis();
                 // 현재시간을 date 변수에 저장한다.
                 Date date = new Date(now);
-                // 시간을 나타냇 포맷을 정한다 ( yyyy/MM/dd 같은 형태로 변형 가능 )
+                // 시간을 나타냇 포맷을 정한다 ( yyyy/mm/dd 같은 형태로 변형 가능 )
                 SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
                 // nowDate 변수에 값을 저장한다.
                 String endTime = sdfNow.format(date);
@@ -158,7 +154,7 @@ public class HomeFragment extends Fragment {
                         btnStop.setVisibility(View.INVISIBLE);
                         Toast.makeText(getActivity(), "활동이 종료되었어요.", Toast.LENGTH_LONG).show();
                         imgMain.setImageResource(R.drawable.timeicon);
-                        txtTitle.setText("현재 활동 내용이 없어요!");
+                        txtTitle.setText("현재 활동 내용이 없어요 !");
                         txtSubTitle.setText(" ");
 
                         chrono.setBase(SystemClock.elapsedRealtime());
@@ -246,7 +242,7 @@ public class HomeFragment extends Fragment {
                 public boolean onLongClick(View v) {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setTitle("활동 삭제").setMessage("선택하신 활동을 삭제하시겠습니까??");
+                    builder.setTitle("활동 삭제").setMessage("선택하신 활동을 삭제하시겠어요?");
                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener(){
 
                         @Override
@@ -258,7 +254,7 @@ public class HomeFragment extends Fragment {
                             getActivity().recreate();
 //                            getFragmentManager().beginTransaction().replace(R.id.container, HomeFragment.newInstance()).commit();
                             // 여기에 refresh()메소드를 삽입해줘야함
-                            Toast.makeText(getActivity(), "성공적으로 활동이 삭제되었습니다.!!" , Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), "활동이 삭제되었어요." , Toast.LENGTH_LONG).show();
                         }
                     });
 
@@ -282,19 +278,19 @@ public class HomeFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setTitle("활동 시작").setMessage("활동을 시작하시겠습니까??");
+                    builder.setTitle("활동 시작").setMessage("활동을 시작하시겠어요?");
                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener(){
                         @Override
                         public void onClick(DialogInterface dialog, int id)
                         {
-                            Toast.makeText(getActivity(), "활동이 시작되었습니다.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), "활동이 시작되었어요.", Toast.LENGTH_LONG).show();
                             chrono.setVisibility(View.VISIBLE);
                             btnStop.setVisibility(View.VISIBLE);
                             imgMain.setImageResource(posterID[position]);
-                            txtTitle.setText(posterText[position] + "중 입니다.");
+                            txtTitle.setText(posterText[position] + "중 이예요.");
                             // DB값 저장하기위한 용도
                             index = position;
-                            txtSubTitle.setText("새로운 일정을 시작하셨습니다.");
+                            txtSubTitle.setText("새로운 일정을 시작하셨어요.");
 
 
 

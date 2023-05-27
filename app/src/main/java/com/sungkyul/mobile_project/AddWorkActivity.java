@@ -48,7 +48,7 @@ public class AddWorkActivity extends Activity {
         btnaddImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"test", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"테스트", Toast.LENGTH_LONG).show();
                 showAlertDialog();
             }
         });
@@ -59,7 +59,7 @@ public class AddWorkActivity extends Activity {
             @Override
             public void onClick(View v) {
                 edtName = (EditText)findViewById(R.id.edtName);
-                Option option = new Option(edtName.getText().toString(),"test");
+                Option option = new Option(edtName.getText().toString(),"테스트");
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.putExtra("class" ,option);
@@ -98,7 +98,7 @@ public class AddWorkActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // do something here
-                Toast.makeText(getApplicationContext(), "test" + position, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "테스트" + position, Toast.LENGTH_LONG).show();
                 btnaddImg.setBackgroundResource(imgResource[position]);
                 ad.dismiss();
                 index = position;
@@ -117,10 +117,6 @@ public class AddWorkActivity extends Activity {
     public class ImageGridAdapter extends BaseAdapter {
 
         Context context = null;
-
-        //-----------------------------------------------------------
-        // imageIDs는 이미지 파일들의 리소스 ID들을 담는 배열
-        // 이 배열의 원소들은 자식 뷰들인 ImageView 뷰들이 무엇을 보여주는지를 결정할때 활용
 
         int[] imageIDs = null;
 
@@ -143,7 +139,6 @@ public class AddWorkActivity extends Activity {
             if (null != convertView)
                 imageView = (ImageView)convertView;
             else {
-                //---------------------------------------------------------------
                 // GridView 뷰를 구성할 ImageView 뷰의 비트맵을 정의
                 // 크기를 320*240으로 설정
 
@@ -151,7 +146,6 @@ public class AddWorkActivity extends Activity {
                         = BitmapFactory.decodeResource(context.getResources(), imageIDs[position]);
                 bmp = Bitmap.createScaledBitmap(bmp, 320, 240, false);
 
-                //---------------------------------------------------------------
                 // GridView 뷰를 구성할 ImageView 뷰들을 정의
                 // 뷰에 지정할 이미지는 앞에서 정의한 비트맵 객체
                 imageView = new ImageView(context);

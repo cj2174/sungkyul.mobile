@@ -121,9 +121,9 @@ public class SetFragment extends Fragment {
 
 
         //데이터 백업하기
-        LinerOutData = rootView.findViewById(R.id.LinerOutdata);
+        LinerInputData = rootView.findViewById(R.id.LinerInputdata);
 
-        LinerOutData.setOnClickListener(new View.OnClickListener(){
+        LinerInputData.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "데이터를 백업하였습니다.",Toast.LENGTH_SHORT).show();
@@ -131,9 +131,9 @@ public class SetFragment extends Fragment {
         });
 
         //데이터 삭제하기
-        LinerInputData = rootView.findViewById(R.id.LinerInputData);
+        LinerOutData = rootView.findViewById(R.id.LinerOutData);
 
-        LinerInputData.setOnClickListener(new View.OnClickListener(){
+        LinerOutData.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "데이터를 삭제하였습니다.",Toast.LENGTH_SHORT).show();

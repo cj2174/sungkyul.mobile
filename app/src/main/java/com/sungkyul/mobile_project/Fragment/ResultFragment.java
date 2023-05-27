@@ -53,10 +53,7 @@ public class ResultFragment extends Fragment {
     final Calendar c = Calendar.getInstance();
     //ListView
     ListView listresult;
-    //PieChart
-    PieChart pieChart;
 
-    TextView txtActivityname;
     //DB
     public static MyDBHelper myDBHelper;
     public static SQLiteDatabase db;
@@ -118,7 +115,7 @@ public class ResultFragment extends Fragment {
 
 
         while(cursor.moveToNext()){
-            Log.i(this.getClass().getName(), "Cursor안에 들어옴!");
+            Log.i(this.getClass().getName(), "Cursor안에 들어옴");
             String activityname = cursor.getString(1);
             String starttime = cursor.getString(2);
             starttime = starttime.split(" ")[1].split(":")[0] +
@@ -144,13 +141,10 @@ public class ResultFragment extends Fragment {
             resource = cursor1.getInt(2);
 
 
-
-            // 파이차트를 쓰기위해
             resultItems[cursor.getPosition()] = new ResultItem(activityname, starttime, endtime, cursor.getString(4), resource);
 
             adapter.addItem(new ResultItem(activityname, starttime, endtime, timedata, resource));
         }
-//        db.close();
 
         //어댑터 연결
         listresult.setAdapter(adapter);
@@ -164,16 +158,15 @@ public class ResultFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                //리스트뷰가 보여지고있으면 끔
+
                 if(listresult.getVisibility() == View.VISIBLE){
                     listresult.setVisibility(View.INVISIBLE);
                 }
 
-                //txtDate가 켜져있으면 리스트뷰보여주소 txtDate는 끔
                 if(Dpicker.getVisibility() == View.VISIBLE){
                     Dpicker.setVisibility(View.INVISIBLE);
                     listresult.setVisibility(View.VISIBLE);
-                }else{ //txtDate가 꺼져있으면 txtDate를 보이게
+                }else{
                     Dpicker.setVisibility(View.VISIBLE);
                 }
             }
