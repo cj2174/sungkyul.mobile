@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sungkyul.mobile_project">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:icon="@drawable/login_back"
+        android:label="갓생 살기"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.sungkyul.mobile_project.TimerService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name="com.sungkyul.mobile_project.SplashActivity"
+            android:theme="@style/SplashThme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.sungkyul.mobile_project.SetFragment.NoticeActivity"/>
+        <activity android:name="com.sungkyul.mobile_project.MainActivity"></activity>
+        <activity android:name="com.sungkyul.mobile_project.LoginActivity" />
+        <activity android:name="com.sungkyul.mobile_project.PlanFragment.AddPlanActivity" />
+        <activity android:name="com.sungkyul.mobile_project.SignUp" />
+        <activity
+            android:name="com.sungkyul.mobile_project.SetFragment.QuestionActivity"
+            android:label="Question 액티비티" />
+        <activity
+            android:name="com.sungkyul.mobile_project.SetFragment.SettingActivity"
+            android:label="Setting 액티비티" />
+        <activity android:name="com.sungkyul.mobile_project.AddWorkActivity" />
+    </application>
+
+</manifest>

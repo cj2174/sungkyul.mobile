@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.SetFragment">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/LinerNotice"
+        android:layout_marginTop="5dp">
+
+    <ImageView
+        android:layout_height="48dp"
+        android:layout_width="48dp"
+        android:padding="5dp"
+        android:src="@drawable/baseline_notifications_black_48dp"
+        />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text=" 공지사항"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity=""
+        android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#000000"/>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/LinerQuestion"
+        android:layout_marginTop="5dp">
+
+    <ImageView
+        android:layout_height="48dp"
+        android:padding="5dp"
+        android:layout_width="48dp"
+        android:src="@drawable/baseline_question_answer_black_48dp"/>
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text=" 질문 및 피드백 보내기"
+        android:layout_gravity="center"
+        android:gravity=""
+        android:textSize="25dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#000000"/>
+
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#000000"/>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/LinerSetting"
+        android:layout_marginTop="5dp">
+
+    <ImageView
+        android:layout_height="48dp"
+        android:layout_width="48dp"
+
+        android:padding="5dp"
+        android:src="@drawable/baseline_settings_black_48dp"/>
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text=" 설정"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity=""
+        android:textSize="25dp"/>
+
+</LinearLayout>
+
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#000000"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/LinerOutdata"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_height="48dp"
+                android:layout_width="48dp"
+                android:padding="5dp"
+                android:src="@drawable/baseline_cloud_upload_black_48dp"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text=" 데이터 백업하기"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity=""
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#000000"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/LinerInputData"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_height="48dp"
+                android:layout_width="48dp"
+                android:padding="5dp"
+                android:src="@drawable/baseline_cloud_download_black_48dp"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text=" 데이터 삭제하기"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity=""
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#000000"/>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/LinerLogout"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/fragmentSetLoginImageView"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:padding="5dp"
+            android:src="@drawable/login"/>
+
+        <TextView
+            android:id="@+id/fragmentSetloginText"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text=" 회원가입 및 로그인"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity=""
+            android:textSize="25dp"
+            android:textColor="@color/colorGreen"/>
+
+    </LinearLayout>
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#000000"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>

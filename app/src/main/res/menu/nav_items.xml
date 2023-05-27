@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_black_18dp"
+        android:title="홈" />
+    <item
+        android:id="@+id/nav_plan"
+        android:icon="@drawable/baseline_watch_later_black_18dp"
+        android:title="계획" />
+
+    <item
+        android:id="@+id/nav_result"
+        android:icon="@drawable/outline_table_chart_black_18dp"
+        android:title="분석" />
+
+    <item
+        android:id="@+id/nav_set"
+        android:icon="@drawable/baseline_settings_black_18dp"
+        android:title="환경설정" />
+
+</menu>
