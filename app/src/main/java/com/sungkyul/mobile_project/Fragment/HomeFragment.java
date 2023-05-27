@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment {
     // 현재 데이터 개수 -1
     int i=0;
     int length;
-
+    //
     Chronometer chrono;
     View view;
     Button btnStop;
